@@ -3,4 +3,80 @@
   <groupId>cisc181.edu</groupId>
   <artifactId>DetailCode_Chapter02</artifactId>
   <version>0.0.1-SNAPSHOT</version>
+
+	<build>
+		<plugins>
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-compiler-plugin</artifactId>
+				<version>3.8.0</version>
+				<configuration>
+					<release>13</release>
+					<compilerArgs>--enable-preview</compilerArgs>
+				</configuration>
+			</plugin>
+
+
+
+		</plugins>
+	</build>
+
+	<properties>
+
+		<!-- Generic properties -->
+		<JavaFX.Platform>win</JavaFX.Platform>
+		<!-- <JavaFX.Platform>mac</JavaFX.Platform> -->
+		<!-- <JavaFX.Platform>linux</JavaFX.Platform> -->
+
+		<java.version>1.13</java.version>
+		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+		<project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
+
+		<!-- Spring -->
+		<spring-framework.version>5.1.8.RELEASE</spring-framework.version>
+
+		<!-- Hibernate / JPA -->
+		<hibernate.version>5.0.2.Final</hibernate.version>
+
+		<!-- Logging -->
+		<logback.version>1.2.3</logback.version>
+		<slf4j.version>1.7.12</slf4j.version>
+
+		<!-- Test -->
+		<junit.version>4.12</junit.version>
+
+	</properties>
+	<dependencies>
+
+
+		<dependency>
+			<groupId>org.openjfx</groupId>
+			<artifactId>javafx-controls</artifactId>
+			<version>13</version>
+		</dependency>
+
+		<dependency>
+			<groupId>org.openjfx</groupId>
+			<artifactId>javafx-media</artifactId>
+			<version>13</version>
+			<classifier>${JavaFX.Platform}</classifier>
+		</dependency>
+
+		<dependency>
+			<groupId>org.openjfx</groupId>
+			<artifactId>javafx-graphics</artifactId>
+			<version>13</version>
+			<classifier>${JavaFX.Platform}</classifier>
+		</dependency>
+
+
+		<dependency>
+			<groupId>org.openjfx</groupId>
+			<artifactId>javafx-fxml</artifactId>
+			<version>13</version>
+		</dependency>
+	</dependencies>
+
+
+
 </project>
